@@ -54,8 +54,9 @@
 - [x] `Chat`, `MessageList`, `MessageInput`(Enter 전송, Shift+Enter 줄바꿈, 한글 조합 처리, 중지 버튼)
 - [x] `Markdown` — GFM 표·목록, 코드 하이라이트, raw HTML 차단
 - [x] `ConversationList` — 새 대화, 이동, 제목 변경, 삭제, 로그아웃
-- [ ] `(chat)`용 `error.tsx`, `not-found.tsx`(남의 대화나 없는 대화 접근 시 한국어 안내) 추가
-- [ ] 대화 전환 시 보일 `loading.tsx`(스켈레톤) 추가
+- [x] `(chat)`용 `error.tsx`, `not-found.tsx`(남의 대화나 없는 대화 접근 시 한국어 안내) 추가 — 레이아웃 오류용 `app/error.tsx`, 404용 `app/not-found.tsx`도 추가
+- [x] 대화 전환 시 보일 `loading.tsx`(스켈레톤) 추가
+- [ ] 로그인한 상태에서 오류·404·로딩 화면이 사이드바와 함께 잘 보이는지 확인 (`.env.local` 준비 후)
 - [ ] 라이트/다크 모드에서 코드 블록 테마(`github-dark`)가 잘 보이는지 확인
 
 ## 5. 수동 기능 점검 (MVP 인수 기준)
