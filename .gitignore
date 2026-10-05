@@ -1,0 +1,5 @@
+# Serena (코드 분석 도구) 프로젝트 설정·메모리
+.serena/
+
+# Serena 소스 (별도 git 저장소)
+serena/
