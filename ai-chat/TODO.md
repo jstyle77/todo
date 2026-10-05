@@ -76,9 +76,10 @@
 
 ### 단위 테스트 (Vitest)
 - [x] 제목 생성, 요청 스키마, `toClaudeMessages`, `toObjectId` (13개)
-- [ ] **repository 사용자 격리 테스트** — `mongodb-memory-server`(또는 테스트 DB)로 사용자 A의 대화를 사용자 B가 조회 / 이름 변경 / 삭제할 수 없는지 검증
-- [ ] `deleteConversation`이 해당 대화의 메시지만 지우는지 검증
-- [ ] `/api/chat` 라우트 테스트 — `auth`와 Anthropic SDK를 모킹해 401 / 400 / 404, 텍스트 델타 전달, `stop_reason` 안내, 연결 오류(429·503) 응답을 확인
+- [x] **repository 사용자 격리 테스트** — `mongodb-memory-server`로 사용자 A의 대화를 사용자 B가 조회 / 이름 변경 / 삭제할 수 없는지 검증 (`tests/unit/repositories.test.ts`, 10개)
+- [x] `deleteConversation`이 해당 대화의 메시지만 지우는지 검증
+- [x] `/api/chat` 라우트 테스트 — `auth`와 Anthropic SDK를 모킹해 401 / 400 / 404, 텍스트 델타 전달, `stop_reason` 안내, 중단 시 부분 저장, 연결 오류(429·500·503) 응답을 확인 (`tests/unit/chat-route.test.ts`, 17개)
+- [ ] `/api/conversations`, `/api/conversations/[id]` 라우트 테스트 (401, PATCH 400, 남의 대화 404, DELETE 204)
 
 ### E2E (Playwright)
 - [ ] E2E 실행에 필요한 환경 정리 (`.env.local` 없이 dev 서버를 띄우면 `auth()`에서 환경 변수 오류가 남)
